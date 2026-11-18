@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: sellersmart-support-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python sellersmart.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: BOT_TOKEN
+        sync: false
